@@ -1,0 +1,41 @@
+require "rake/testtask"
+require "rubygems/package_task"
+
+desc "Default task."
+task :default => :test
+
+## Unit tests
+
+Rake::TestTask.new do |t|
+  t.libs << "test"
+  t.pattern = "test/**/*_test.rb"
+  t.warning = true
+  t.verbose = true
+  t.ruby_opts = ["--dev"] if defined?(JRUBY_VERSION)
+end
+
+## Generate GEM
+
+spec = eval(File.read("ruby-commons.gemspec"))
+
+Gem::PackageTask.new(spec) do |pkg|
+  pkg.gem_spec = spec
+end
+
+## Publishing
+
+desc "Release to rubygems."
+task :release => :package do
+  require "rake/gemcutter"
+  Rake::Gemcutter::Tasks.new(spec).define
+  Rake::Task["gem:push"].invoke
+end
+
+## Helpers
+
+desc "Calculate LOC for a provided file list."
+task :lines do
+  load File.expand_path("../../tools/line_statistics.rb", File.dirname(__FILE__))
+  files = FileList["{config,lib,test}/**/*.rb"]
+  CodeTools::LineStatistics.new(files).print_loc
+end

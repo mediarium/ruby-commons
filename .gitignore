@@ -1,0 +1,26 @@
+*.gem
+*.rbc
+
+# Documentation cache and generated files
+.yardoc
+_yardoc
+coverage/
+doc/
+log/
+pkg/
+rdoc/
+
+# Environment normalisation
+.bundle
+.rake_tasks~
+.rvmrc
+
+# Library or gem files
+.ruby-gemset
+.ruby-version
+
+# RubyMine project
+.idea/
+
+# Other
+.DS_Store

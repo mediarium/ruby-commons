@@ -1,0 +1,17 @@
+PATH
+  remote: .
+  specs:
+    ruby-commons (0.0.0)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  ruby-commons!
+
+BUNDLED WITH
+   1.10.1
