@@ -1,4 +1,4 @@
-PROJECTS ||= %w( ruby-commons ) # Add all projects
+PROJECTS ||= %w(ruby-commons)
 
 $:.unshift File.expand_path('..', __FILE__)
 require 'bundler'
@@ -34,5 +34,5 @@ task :clean do
   FileUtils.rm_rf('pkg')
 end
 
-desc 'Release all gems to RubyGems and create a tag.'
+desc 'Release all gems to RubyGems.org and create a tag.'
 task :release => 'all:release'

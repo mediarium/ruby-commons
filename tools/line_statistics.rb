@@ -29,7 +29,7 @@ module CodeTools
             codelines += 1
           end
         end
-        puts "L: #{sprintf("%4d", lines)}, LOC #{sprintf("%4d", codelines)} | #{file_name}"
+        puts "L: #{sprintf('%4d', lines)}, LOC #{sprintf('%4d', codelines)} | #{file_name}"
 
         total_lines     += lines
         total_codelines += codelines

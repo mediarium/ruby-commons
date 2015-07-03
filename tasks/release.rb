@@ -40,7 +40,7 @@ PROJECTS.each do |project|
       File.open(file, 'w') { |f| f.write ruby }
     end
 
-    task gem_path => %w( update_versions pkg ) do
+    task gem_path => %w(update_versions pkg) do
       sh "cd #{project} && gem build #{gem_spec} && mv #{gem_name} #{root}/pkg/"
     end
 
@@ -89,5 +89,5 @@ namespace :all do
     sh "git push --tags"
   end
 
-  task :release => %w( ensure_clean_state build commit tag push )
+  task :release => %w(ensure_clean_state build commit tag push)
 end
