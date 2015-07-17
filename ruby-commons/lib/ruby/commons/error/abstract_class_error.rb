@@ -1,1 +1,2 @@
-class AbstractClassError < StandardError; end
+class AbstractClassError < StandardError
+end

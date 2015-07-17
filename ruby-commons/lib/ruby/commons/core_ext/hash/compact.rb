@@ -18,6 +18,7 @@ class Hash
     self.reject! { |_, value| value.nil? }
   end
 
+  ##
   # TODO:
   def mp_deep_compact!
     proc_val = Proc.new {}
