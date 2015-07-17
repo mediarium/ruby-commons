@@ -5,4 +5,5 @@ module Ruby
 end
 
 require 'ruby/commons/core_ext'
+require 'ruby/commons/error'
 require 'ruby/commons/version'
