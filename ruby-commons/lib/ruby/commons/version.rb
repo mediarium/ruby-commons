@@ -1,4 +1,4 @@
-require "ruby/commons/gem_version"
+require_relative 'gem_version'
 
 module Ruby::Commons
 

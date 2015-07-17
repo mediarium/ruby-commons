@@ -22,7 +22,7 @@ module CodeTools
       @files.each do |file_name|
         next if file_name =~ /vendor/
         File.open(file_name, 'r') do |f|
-          while line = f.gets
+          while (line = f.gets)
             lines += 1
             next if line =~ /^\s*$/
             next if line =~ /^\s*#/

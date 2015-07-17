@@ -1,3 +1,3 @@
 = Ruby::Commons
 
-TODO: Write a description
+A toolkit of support libraries and Ruby core extensions.

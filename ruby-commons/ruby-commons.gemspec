@@ -5,9 +5,8 @@ Gem::Specification.new do |s|
   s.platform      = Gem::Platform::RUBY
   s.name          = 'ruby-commons'
   s.version       = version
-  # TODO: description!
-  s.summary       = 'Ruby::Commons'
-  s.description   = 'Ruby::Commons'
+  s.summary       = 'A toolkit of support libraries and Ruby core extensions.'
+  s.description   = 'A toolkit of support libraries and Ruby core extensions.'
 
   s.license       = 'BSD-3'
 
@@ -15,7 +14,7 @@ Gem::Specification.new do |s|
   s.email         = 'alexander.bragin@gmail.com'
   s.homepage      = 'http://www.mediarium.com'
 
-  s.files         = Dir['{config,lib}/**/*', 'LICENSE.txt', 'README.rdoc']
+  s.files         = Dir['{config,lib}/**/*.rb', 'LICENSE.txt', 'README.rdoc']
   s.require_paths = %w(config, lib)
 
   s.rdoc_options << '--exclude' << '.'

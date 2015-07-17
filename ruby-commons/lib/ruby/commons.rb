@@ -1,7 +1,8 @@
 module Ruby
   module Commons
-    # TODO: ...
+    # TODO:
   end
 end
 
-require "ruby/commons/version"
+require 'ruby/commons/core_ext'
+require 'ruby/commons/version'
