@@ -35,7 +35,7 @@ end
 
 desc 'Calculate LOC for a provided file list.'
 task :lines do
-  load File.expand_path('../../tools/line_statistics.rb', File.dirname(__FILE__))
+  load File.expand_path('../tools/line_statistics.rb', File.dirname(__FILE__))
   files = FileList['{config,lib,test}/**/*.rb']
   CodeTools::LineStatistics.new(files).print_loc
 end

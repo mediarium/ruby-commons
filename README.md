@@ -1,6 +1,28 @@
 # Ruby::Commons
 
-TODO: Write a description
+## Description
+
+A toolkit of support libraries and Ruby core extensions.
+
+## Installation
+
+Add this line to your application's Gemfile:
+
+```ruby
+gem 'ruby-commons'
+```
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install ruby-commons
+
+## Usage
+
+TODO: Write usage instructions here
 
 ## Contributing
 
@@ -9,3 +31,7 @@ TODO: Write a description
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## License
+
+Ruby::Commons is released under the [BSD-3 License](http://opensource.org/licenses/BSD-3-Clause).
