@@ -1,5 +1,6 @@
 class Hash
-  # Slice a hash to include only the given keys. Returns a hash containing 
+  ##
+  # Slice a hash to include only the given keys. Returns a hash containing
   # the given keys.
   # 
   #   { a: 1, b: 2, c: 3, d: 4 }.mp_slice(:a, :b)
@@ -23,6 +24,7 @@ class Hash
     keys.each_with_object(self.class.new) { |k, hash| hash[k] = self[k] if has_key?(k) }
   end
 
+  ##
   # Replaces the hash with only the given keys.
   # Returns a hash containing the removed key/value pairs.
   #
@@ -38,6 +40,7 @@ class Hash
     omit
   end
 
+  ##
   # Removes and returns the key/value pairs matching the given keys.
   #
   #   { a: 1, b: 2, c: 3, d: 4 }.mp_extract!(:a, :b) # => {:a=>1, :b=>2}

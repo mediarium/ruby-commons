@@ -1,4 +1,5 @@
 class Hash
+  ##
   # Returns a hash with non +nil+ values.
   #
   #   hash = { a: true, b: false, c: nil}
@@ -9,6 +10,7 @@ class Hash
     self.select { |_, value| !value.nil? }
   end
 
+  ##
   # Replaces current hash with non +nil+ values.
   #
   #   hash = { a: true, b: false, c: nil}
