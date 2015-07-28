@@ -30,8 +30,10 @@ task :install => 'all:install'
 desc 'Clean the whole repository by removing all the generated files.'
 task :clear => :clean
 task :clean do
-  puts 'Deleting pkg directory...'
-  FileUtils.rm_rf('pkg')
+  %w(pkg).each do |dir|
+    puts "Deleting ‘#{dir}’ directory..."
+    FileUtils.rm_rf(dir)
+  end
 end
 
 desc 'Release all gems to RubyGems.org and create a tag.'

@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.homepage      = 'http://www.mediarium.com'
 
   s.files         = Dir['{config,lib}/**/*.rb', 'LICENSE.txt', 'README.rdoc']
-  s.require_paths = %w(config, lib)
+  s.require_paths = %w(config lib)
 
   s.rdoc_options << '--exclude' << '.'
 

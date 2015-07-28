@@ -1,5 +1,5 @@
 PATH
-  remote: .
+  remote: ruby-commons
   specs:
     ruby-commons (0.0.4)
 

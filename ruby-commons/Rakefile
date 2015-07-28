@@ -7,10 +7,10 @@ task :default => :test
 ## Unit tests
 
 Rake::TestTask.new do |t|
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.warning = true
-  t.verbose = true
+  t.libs      = %w(config lib test)
+  t.pattern   = 'test/**/*_test.rb'
+  t.warning   = true
+  t.verbose   = true
   t.ruby_opts = ['--dev'] if defined? JRUBY_VERSION
 end
 
