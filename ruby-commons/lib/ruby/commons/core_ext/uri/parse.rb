@@ -1,5 +1,4 @@
 module URI
-
   ##
   # TODO:
   def self.mp_try_parse(uri)
@@ -9,5 +8,4 @@ module URI
       return nil
     end
   end
-
 end

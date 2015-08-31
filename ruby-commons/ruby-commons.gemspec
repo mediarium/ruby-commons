@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.rdoc_options << '--exclude' << '.'
 
   # Requirements
-  s.required_ruby_version     = '>= 2.2.2'
+  s.required_ruby_version     = '>= 2.2.3'
   s.required_rubygems_version = '>= 2.4.0'
 
   # TODO: External dependencies

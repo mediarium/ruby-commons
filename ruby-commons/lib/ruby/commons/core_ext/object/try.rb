@@ -1,4 +1,5 @@
 class Object
+  ##
   # Invokes the public method whose name goes as first argument just like
   # +public_send+ does, except that if the receiver does not respond to it the
   # call returns +nil+ rather than raising an exception.
@@ -63,9 +64,9 @@ class Object
     mp_try!(*a, &b) if a.empty? || respond_to?(a.first)
   end
 
+  ##
   # Same as #mp_try, but will raise a NoMethodError exception if the receiver is not +nil+ and
   # does not implement the tried method.
-  
   def mp_try!(*a, &b)
     if a.empty? && block_given?
       if b.arity.zero?
@@ -80,6 +81,7 @@ class Object
 end
 
 class NilClass
+  ##
   # Calling +mp_try+ on +nil+ always returns +nil+.
   # It becomes especially helpful when navigating through associations that may return +nil+.
   #

@@ -1,5 +1,5 @@
 class Object
-
+  ##
   # TODO:
   def mp_deep_freeze
     proc_val = Proc.new {}
@@ -23,5 +23,4 @@ class Object
 
     proc_val.call(self)
   end
-
 end

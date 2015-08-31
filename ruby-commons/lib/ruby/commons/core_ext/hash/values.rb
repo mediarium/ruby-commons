@@ -22,4 +22,61 @@ class Hash
       self[key] = yield(key, value)
     end
   end
+
+  ##
+  # Returns a new hash with all values converted by the block operation.
+  # This includes the values from the root hash and from all
+  # nested hashes and arrays.
+  #
+  #  hash = { person: { name: 'Rob', gender: 'Male' } }
+  #
+  #  hash.mp_deep_transform_values { |value| value.to_s.upcase }
+  #  # => {:person=>{:name=>"ROB", :gender=>"MALE"}}
+  def mp_deep_transform_values(&block)
+    __mp_deep_transform_values_in_object(self, &block)
+  end
+
+  ##
+  # Destructively converts all values by using the block operation.
+  # This includes the values from the root hash and from all
+  # nested hashes and arrays.
+  def mp_deep_transform_values!(&block)
+    __mp_deep_transform_values_in_object!(self, &block)
+  end
+
+# MARK: - Private Methods
+
+  ##
+  # Support methods for deep transforming nested hashes and arrays
+  private
+  def __mp_deep_transform_values_in_object(object, &block)
+    case object
+    when Hash
+      object.each_with_object({}) do |(key, value), result|
+        result[key] = __mp_deep_transform_values_in_object(yield(key, value), &block)
+      end
+    when Array
+      object.map { |e| __mp_deep_transform_values_in_object(e, &block) }
+    else
+      object
+    end
+  end
+
+  ##
+  # Support methods for deep transforming nested hashes and arrays
+  private
+  def __mp_deep_transform_values_in_object!(object, &block)
+    case object
+    when Hash
+      object.keys.each do |key|
+        value = object.delete(key)
+        object[key] = __mp_deep_transform_values_in_object!(yield(key, value), &block)
+      end
+      object
+    when Array
+      object.map! { |e| __mp_deep_transform_values_in_object!(e, &block) }
+    else
+      object
+    end
+  end
 end

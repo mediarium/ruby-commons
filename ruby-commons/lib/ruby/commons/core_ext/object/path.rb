@@ -1,6 +1,7 @@
 class Object
-	# Gets a value from an Object using a dot separated path.
-	#
+  ##
+  # Gets a value from an Object using a dot separated path.
+  #
   #  { a: 1, b: { c: 3, d: [1, 2, 3] } }.mp_path('b.d')   # => [1, 2, 3]
   #  { a: 1, b: { c: 3, d: [1, 2, 3] } }.mp_path('b.d.1') # => 2
   def mp_path(path = '', default = nil, delimiter = '.')

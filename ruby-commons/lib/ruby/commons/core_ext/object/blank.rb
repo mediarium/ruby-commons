@@ -1,4 +1,5 @@
 class Object
+  ##
   # An object is blank if it's false, empty, or a whitespace string.
   # For example, '', '   ', +nil+, [], and {} are all blank.
   #
@@ -15,6 +16,7 @@ class Object
     respond_to?(:empty?) ? !!empty? : !self
   end
 
+  ##
   # An object is present if it's not blank.
   #
   # @return [true, false]
@@ -22,6 +24,7 @@ class Object
     !mp_blank?
   end
 
+  ##
   # Returns the receiver if it's present otherwise returns +nil+.
   # <tt>object.mp_presence</tt> is equivalent to
   #
@@ -44,6 +47,7 @@ class Object
 end
 
 class NilClass
+  ##
   # +nil+ is blank:
   #
   #   nil.mp_blank? # => true
@@ -55,6 +59,7 @@ class NilClass
 end
 
 class FalseClass
+  ##
   # +false+ is blank:
   #
   #   false.mp_blank? # => true
@@ -66,6 +71,7 @@ class FalseClass
 end
 
 class TrueClass
+  ##
   # +true+ is not blank:
   #
   #   true.mp_blank? # => false
@@ -77,6 +83,7 @@ class TrueClass
 end
 
 class Array
+  ##
   # An array is blank if it's empty:
   #
   #   [].mp_blank?      # => true
@@ -87,6 +94,7 @@ class Array
 end
 
 class Hash
+  ##
   # A hash is blank if it's empty:
   #
   #   {}.mp_blank?                # => true
@@ -99,6 +107,7 @@ end
 class String
   MP_BLANK_RE = /\A[[:space:]]*\z/
 
+  ##
   # A string is blank if it's empty or contains whitespaces only:
   #
   #   ''.mp_blank?       # => true
@@ -117,6 +126,7 @@ class String
 end
 
 class Numeric #:nodoc:
+  ##
   # No number is blank:
   #
   #   1.mp_blank? # => false

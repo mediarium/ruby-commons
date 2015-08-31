@@ -1,8 +1,7 @@
-require 'ruby/commons'
-require 'test/unit'
+require 'test_helper'
 
-module Mediarium
-  class VersionTest < Test::Unit::TestCase
+module Ruby::Commons
+  class VersionTest < Minitest::Test
 
     def test_ruby_commons_version_returns_a_string
       assert Ruby::Commons.version.is_a? String
