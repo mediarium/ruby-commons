@@ -3,15 +3,15 @@
 
 module JSON
   ##
-  # TODO:
-  def self.include(file_name)
+  # TODO
+  def self.mp_include(file_name)
     require 'erb'
     ERB.new(IO.read(file_name)).result
   end
 
   ##
-  # TODO:
-  def self.load_erb(file_name)
-    JSON::load(JSON::include(file_name))
+  # TODO
+  def self.mp_load_erb(file_name)
+    JSON::load(JSON::mp_include(file_name))
   end
 end

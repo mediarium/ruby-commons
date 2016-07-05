@@ -1,6 +1,6 @@
 module Ruby
   module Commons
-    # TODO:
+    # Do nothing
   end
 end
 

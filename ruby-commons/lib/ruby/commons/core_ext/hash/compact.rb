@@ -21,7 +21,7 @@ class Hash
   end
 
   ##
-  # TODO:
+  # TODO
   def mp_deep_compact!
     proc_val = Proc.new {}
     proc_hsh = Proc.new {}

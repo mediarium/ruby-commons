@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.summary       = 'A toolkit of support libraries and Ruby core extensions.'
   s.description   = 'A toolkit of support libraries and Ruby core extensions.'
 
-  s.license       = 'BSD-3'
+  s.license       = 'BSD-4-Clause'
 
   s.author        = 'Alexander Bragin'
   s.email         = 'alexander.bragin@gmail.com'
@@ -20,7 +20,7 @@ Gem::Specification.new do |s|
   s.rdoc_options << '--exclude' << '.'
 
   # Requirements
-  s.required_ruby_version     = '>= 2.2.3'
+  s.required_ruby_version     = '>= 2.3.0'
   s.required_rubygems_version = '>= 2.4.0'
 
   # TODO: External dependencies

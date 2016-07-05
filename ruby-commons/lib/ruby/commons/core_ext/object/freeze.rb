@@ -1,6 +1,6 @@
 class Object
   ##
-  # TODO:
+  # TODO
   def mp_deep_freeze
     proc_val = Proc.new {}
 
